@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   font-family: 'Courier New', Courier, monospace;
+   background-image:url(bg.PNG);
+   background-size: cover;
+   background-repeat: no-repeat;
+   color:#fff;
+   opacity: 0.8;
+}
+
+.game-title , .turn-info {
+    margin:1.2rem 0px
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.game-box {
+    background:rgba(255, 0, 0, 0.2);
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3,10vw);
+}
+
+.box {
+    border: 2px solid rgb(54, 12, 12);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.box span {
+    font-size: 6rem;
+    color:#fff
+}
+
+.box:hover {
+    background-color: gray ;
+}
+
+.bl-0 {
+    border-left: 0;
+}
+
+.br-0 {
+    border-right: 0;
+}
+
+.bt-0 {
+    border-top: 0;
+}
+
+.bb-0 {
+    border-bottom: 0;
+}
+
+.game-info {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    
+}
+
+.btn {
+    border: 0;
+    color:#fff;
+    font-family: 'Courier New', Courier, monospace;
+    background: #444;
+    width: 20vw;
+    height:32px;
+    padding: 10px;
+    font-size:16px;
+    border-radius: 5px;
+    margin-top: 20px; 
+}
+
+  @media (max-width: 800px ) {
+    /* … */
+    .box span {
+        font-size: 3rem;
+        color:#fff
+    }
+    .game-box {
+        grid-template-rows: repeat(3, 15vw);
+        grid-template-columns: repeat(3,15vw);
+    }
+    .container {
+        margin-top:50px;
+    } 
+  }
+
+  @media (max-width: 1000px ) {
+    body {
+        background-image:url(bg2.png); 
+    }
+  }
